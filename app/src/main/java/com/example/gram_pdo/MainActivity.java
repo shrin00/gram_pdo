@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tLogout;
     private Toolbar toolbar;
+    private Button tPublishNews;
 
     private FirebaseAuth mFirebaseAuth;
 
@@ -33,13 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
 
-        tLogout = (TextView) findViewById(R.id.id_logout);
-        tLogout.setOnClickListener(new View.OnClickListener() {
+        tPublishNews = (Button) findViewById(R.id.id_publishNews);
+        tPublishNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mFirebaseAuth.signOut();
-                startActivity(new Intent(MainActivity.this, Loginpage.class));
-                finish();
+                startActivity(new Intent(MainActivity.this, Publishnews.class));
             }
         });
 
