@@ -23,7 +23,15 @@
             android:id="@+id/id_publishNews"
             android:layout_width="match_parent"
             android:layout_height="67dp"
+            android:layout_margin="10dp"
             android:text="Publish News" />
+
+        <Button
+            android:id="@+id/id_publishService"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_margin="10dp"
+            android:text="Add service"/>
 
     </LinearLayout>
 

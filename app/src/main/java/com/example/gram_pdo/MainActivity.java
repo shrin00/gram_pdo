@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private Button tPublishNews;
+    private Button tPublishNews, tAddSerivece;
 
     private FirebaseAuth mFirebaseAuth;
 
@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Publishnews.class));
+            }
+        });
+
+        tAddSerivece = (Button) findViewById(R.id.id_publishService);
+        tAddSerivece.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Addservice.class));
             }
         });
 
