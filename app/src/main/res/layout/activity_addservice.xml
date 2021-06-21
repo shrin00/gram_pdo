@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="407dp"
-        android:layout_height="310dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,17 +46,21 @@
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:id="@+id/id_service_name"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/id_addservice"
+            android:choiceMode="multipleChoice"
+            android:layout_marginBottom="10dp">
+
+        </ListView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/id_submitservice"
             android:layout_width="146dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:background="@color/Lightyellow"
             android:text="submit Service"
             android:textSize="20sp" />
