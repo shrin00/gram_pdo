@@ -33,6 +33,13 @@
             android:layout_margin="10dp"
             android:text="Add service"/>
 
+        <Button
+            android:id="@+id/id_viewService"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_margin="10dp"
+            android:text="view applications"/>
+
     </LinearLayout>
 
 

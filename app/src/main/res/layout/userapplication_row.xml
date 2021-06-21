@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/single_row_id">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heloooooo"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/userApplicationName_id"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How are ayouo"
+            android:textSize="10sp"
+            android:layout_below="@id/userApplicationName_id"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/userApplicationEmail_id"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
