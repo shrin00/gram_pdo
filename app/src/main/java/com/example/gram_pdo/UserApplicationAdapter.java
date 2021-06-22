@@ -1,6 +1,7 @@
 package com.example.gram_pdo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +23,11 @@ public class UserApplicationAdapter extends FirebaseRecyclerAdapter<UserApplicat
      * @param options
      */
     Context context;
-    public UserApplicationAdapter(@NonNull FirebaseRecyclerOptions<UserApplicationModel> options, Context context) {
+    String servicepostkey;
+    public UserApplicationAdapter(@NonNull FirebaseRecyclerOptions<UserApplicationModel> options, Context context, String servicepostkey) {
         super(options);
         this.context = context;
+        this.servicepostkey = servicepostkey;
     }
 
     @Override
@@ -32,6 +35,16 @@ public class UserApplicationAdapter extends FirebaseRecyclerAdapter<UserApplicat
         final String postkey = getRef(position).getKey();
         holder.tName.setText(model.getName());
         holder.tEmail.setText(model.getEmail());
+        holder.tName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ViewUserApplication.class);
+                intent.putExtra("postkey", postkey);
+                intent.putExtra("servicepostkey", servicepostkey);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @NonNull

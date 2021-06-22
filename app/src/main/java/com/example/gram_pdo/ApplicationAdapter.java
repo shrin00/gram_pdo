@@ -47,7 +47,7 @@ public class ApplicationAdapter extends FirebaseRecyclerAdapter<ServiceviewModel
                         .setQuery(mserviceref, UserApplicationModel.class)
                         .build();
 
-        museradapter = new UserApplicationAdapter(options1, context);
+        museradapter = new UserApplicationAdapter(options1, context, postkey);
         row_recview.setAdapter(museradapter);
         museradapter.startListening();
     }

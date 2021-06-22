@@ -27,7 +27,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:layout_below="@id/heading_id"
             android:layout_marginLeft="10dp"
             android:id="@+id/id_rowrecycleview">
